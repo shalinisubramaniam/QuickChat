@@ -1,0 +1,7 @@
+# Ignoring the node_modules folder
+
+#Ignoring node_modules is a best practice in Node. js Git repositories. 
+#It helps in keeping your Git operations efficient, 
+#your repository size manageable, and your codebase clean.
+
+node_modules/
