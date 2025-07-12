@@ -62,7 +62,7 @@ export const checkAuth = (req, res) => {
 }
 
 // Controller to Update user profile details
- export const updateProfile = async (req, res) => {
+export const updateProfile = async (req, res) => {
     try {
         const { profilePic, bio, fullName } = req.body;
 
@@ -83,4 +83,4 @@ export const checkAuth = (req, res) => {
         console.log(error.message);
         res.json({success: false, message: error.message})
     }
- }
+} 
