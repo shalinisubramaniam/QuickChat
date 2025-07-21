@@ -44,3 +44,15 @@ export const getMessages = async (req, res) => {
         res.json({success: false, message: error.messages})
     }
 }
+
+// api to mark message as seen using message id
+export const markMessageAsSeen = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Message.findByIdAndUpdate(id, {seen: true})
+        res.json({success: true})
+    } catch (error) {
+        console.log(error.messages);
+        res.json({success: false, message: error.messages})
+    }
+}
