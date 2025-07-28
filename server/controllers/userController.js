@@ -10,7 +10,7 @@ export const signup = async (req, res)=>{
 
     try {
         if(!fullName || !email || !password || !bio){
-            return res.json({success: false, message: "Missing Deatils"})
+            return res.json({success: false, message: "Missing Details"})
         }
         const user = await User.findOne({email});
 
